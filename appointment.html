@@ -141,16 +141,16 @@
 
     <div class="form-card">
       <h3>Book Your Appointment</h3>
-      <form id="apptForm" onsubmit="handleSubmit(event)">
+      <form id="apptForm" action="https://formspree.io/f/xnjgglzy" method="POST">
         <div class="form-row">
-          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required/></div>
-          <div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required/></div>
+          <div class="form-group"><label>Full Name *</label><input type="text" name="Full Name" placeholder="Your full name" required/></div>
+          <div class="form-group"><label>Phone *</label><input type="tel" name="Phone" placeholder="+91 XXXXX XXXXX" required/></div>
         </div>
-        <div class="form-group"><label>Address</label><input type="text" placeholder="Your home address"/></div>
+        <div class="form-group"><label>Address</label><input type="text" name="Address" placeholder="Your home address"/></div>
         <div class="form-row">
-          <div class="form-group"><label>Preferred Date *</label><input type="date" required/></div>
+          <div class="form-group"><label>Preferred Date *</label><input type="date" name="Preferred Date" required/></div>
           <div class="form-group"><label>Department</label>
-            <select>
+            <select name="Department">
               <option value="">Select department</option>
               <option>Orthopaedics</option><option>Internal Medicine</option>
               <option>Urology</option><option>ENT Head &amp; Neck Surgery</option>
@@ -163,14 +163,10 @@
             </select>
           </div>
         </div>
-        <div class="form-group"><label>Illness / Concern *</label><input type="text" placeholder="Brief description of symptoms or reason for visit" required/></div>
+        <div class="form-group"><label>Illness / Concern *</label><input type="text" name="Illness / Concern" placeholder="Brief description of symptoms or reason for visit" required/></div>
         <button type="submit" class="btn-submit">Submit Appointment Request →</button>
       </form>
-      <div class="success-msg" id="successMsg">
-        ✅ Thank you! Your appointment request has been submitted.<br/>
-        We will call you shortly to confirm.<br/>
-        For urgent care: <a href="tel:+918130060854">+91-81300-60854</a>
-      </div>
+
     </div>
 
   </div>
@@ -188,12 +184,6 @@
   <div class="footer-bottom"><span>© 2024 RBS Hospital. All rights reserved.</span><span>Made with ❤️ for better healthcare in Gurugram</span></div>
 </footer>
 
-<script>
-  function handleSubmit(e){
-    e.preventDefault();
-    document.getElementById('apptForm').style.display='none';
-    document.getElementById('successMsg').style.display='block';
-  }
-</script>
+<!-- Form handled by Formspree -->
 </body>
 </html>
